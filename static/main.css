@@ -1,6 +1,6 @@
 body {
   font-family: "Archivo Black", sans-serif;
-  background: #f4d03f;
+  /*background: #fc5c65;*/
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -9,13 +9,13 @@ body {
 }
 
 .words {
-  color: #f4d03f;
+  /*color: #fc5c65;*/
   font-size: 0;
   line-height: 1.5;
 }
 
 .words span {
-  font-size: 5rem;
+  font-size: 10rem;
   display: inline-block;
   animation: move 3s ease-in-out infinite;
 }

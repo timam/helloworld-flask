@@ -1,29 +1,23 @@
 <html>
+
    <head>
       <link rel="stylesheet" href='/static/main.css' />
       <title>Not Just Another Demo</title>
+      <style>
+         body {
+            background: {{ color }};
+         }
+         .words {
+            color:  {{ color }};
+         }
+      </style>
    </head>
+
    <body>
       <div class="words word-1">
-        <span>C</span>
-        <span>O</span>
-        <span>D</span>
-        <span>E</span>
-        <span>P</span>
-        <span>E</span>
-        <span>N</span>
+         {% for item in message %}
+            <span>{{item|upper }}</span>
+         {% endfor %}
       </div>
-
-      <div class="words word-2">
-        <span>I</span>
-        <span>S</span>
-      </div>
-
-      <div class="words word-3">
-        <span>C</span>
-        <span>O</span>
-        <span>O</span>
-        <span>L</span>
-      </div>
-  </body>
+   </body>
 </html>
