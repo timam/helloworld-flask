@@ -14,10 +14,12 @@
    </head>
 
    <body>
+      {% for word in words %}
       <div class="words word-1">
-         {% for item in message %}
+         {% for item in word %}
             <span>{{item|upper }}</span>
          {% endfor %}
       </div>
+      {% endfor %}
    </body>
 </html>

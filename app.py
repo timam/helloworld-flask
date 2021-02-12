@@ -1,7 +1,6 @@
-import string
-
 from flask import Flask, render_template
 import requests
+import re
 
 url = 'http://localhost:8080'
 
@@ -31,7 +30,9 @@ app = Flask(__name__)
 def home():
     color = gimme_color()
     message = gimme_message()
-    return render_template('index.html', color=color, message=message)
+    words = re.sub("[^\w]", " ",  message).split()
+
+    return render_template('index.html', color=color, words=words)
 
 
 if __name__ == "__main__":
