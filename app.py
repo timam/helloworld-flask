@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask_web_log import Log
 import requests
 import re
 
@@ -24,6 +25,9 @@ def gimme_message():
 
 
 app = Flask(__name__)
+app.config["LOG_TYPE"] = "JSON"
+app.config["LOG_FILENAME"] = "helloworld-flask-log"
+Log(app)
 
 
 @app.route('/')
@@ -36,4 +40,5 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
