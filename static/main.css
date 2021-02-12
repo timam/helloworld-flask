@@ -15,7 +15,7 @@ body {
 }
 
 .words span {
-  font-size: 10rem;
+  font-size: 6rem;
   display: inline-block;
   animation: move 3s ease-in-out infinite;
 }
@@ -55,3 +55,20 @@ body {
 .words span:nth-child(7) {
   animation-delay: 3s;
 }
+
+.words span:nth-child(8) {
+  animation-delay: 3.5s;
+}
+
+.words span:nth-child(9) {
+  animation-delay: 4s;
+}
+
+.words span:nth-child(10) {
+  animation-delay: 4.5s;
+}
+
+.words span:nth-child(11) {
+  animation-delay: 5s;
+}
+
